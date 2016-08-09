@@ -8,7 +8,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Wird dieser Zeitpunkt nicht angegeben, gilt die Konferenz immer als angefangen. (Siehe aber ENDS_AT
 	 * und CLOSED weiter unten)
 	 */
-	'STARTS_AT' => strtotime("2016-08-10 17:30"),
+	'STARTS_AT' => strtotime("2016-08-11 08:00"),
 
 	/**
 	 * Der Endzeitpunkt der Konferenz als Unix-Timestamp. Befinden wir uns danach, wird eine Danke-Und-Kommen-Sie-
@@ -16,7 +16,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 *
 	 * Wird dieser Zeitpunkt nicht angegeben, endet die Konferenz nie. (Siehe aber CLOSED weiter unten)
 	 */
-	'ENDS_AT' => strtotime("2016-08-14 18:00"),
+	'ENDS_AT' => strtotime("2016-08-14 18:30"),
 
 	/**
 	 * Hiermit kann die Funktionalitaet von STARTS_AT/ENDS_AT überschrieben werden. Der Wert 'before'
@@ -61,7 +61,7 @@ $GLOBALS['CONFIG']['CONFERENCE'] = array(
 	 * Sollte üblicherweise nur Inline-Elemente enthalten
 	 * Wird diese Zeile auskommentiert, wird die Standard-Attribuierung für (c3voc.de) verwendet
 	 */
-	'FOOTER_HTML' => 'by <a href="https://www.gnome.org/">GNOME</a>',
+	'FOOTER_HTML' => '<a href="http://guadec.org/">GUADEC 2016</a> is a conference by <a href="https://www.gnome.org/">GNOME</a>',
 
 	/**
 	 * HTML-Code für den Banner (nur auf der Startseite, direkt unter dem Header)
@@ -117,8 +117,8 @@ $GLOBALS['CONFIG']['OVERVIEW'] = array(
 	 */
 	'GROUPS' => array(
 		'Lecture Rooms' => array(
-			'ada',
-			'grace',
+			'Grace',
+			'Ada',
 		),
 	),
 );
@@ -133,11 +133,11 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 	 * Array-Key ist der Raum-Slug, der z.B. auch zum erstellen der URLs,
 	 * in $GLOBALS['CONFIG']['OVERVIEW'] oder im Feedback verwendet wird.
 	 */
-	'ada' => array(
+	'Grace' => array(
 		/**
 		 * Angezeige-Name
 		 */
-		'DISPLAY' => 'Ada',
+		'DISPLAY' => 'Grace',
 
 		/**
 		 * ID des Video/Audio-Streams. Die Stream-ID ist davon abhängig, welches
@@ -244,7 +244,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		 * Name des Raums im Fahrplan
 		 * Wenn diese Zeile auskommentiert ist wird der Raum-Slug verwendet
 		 */
-		'SCHEDULE_NAME' => 'Ada',
+		'SCHEDULE_NAME' => 'Grace',
 
 		/**
 		 * Feedback anzeigen (boolean)
@@ -340,8 +340,8 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		),
 	),
 
-	'grace' => array(
-		'DISPLAY' => 'Grace',
+	'Ada' => array(
+		'DISPLAY' => 'Ada',
 		'STREAM' => 's2',
 		'PREVIEW' => true,
 
@@ -353,7 +353,7 @@ $GLOBALS['CONFIG']['ROOMS'] = array(
 		'MUSIC' => false,
 
 		'SCHEDULE' => true,
-		'SCHEDULE_NAME' => 'Grace',
+		'SCHEDULE_NAME' => 'Ada',
 		'FEEDBACK' => false,
 		'SUBTITLES' => false,
 		'EMBED' => false,
@@ -390,7 +390,7 @@ $GLOBALS['CONFIG']['SCHEDULE'] = array(
          *
          * Wird diese Zeile auskommentiert, werden alle Räume angezeigt
          */
-        'ROOMFILTER' => array('Ada', 'Grace'),
+        'ROOMFILTER' => array('Grace', 'Ada'),
 
 	/**
 	 * Skalierung der Programm-Vorschau in Sekunden pro Pixel
